@@ -1,0 +1,59 @@
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner x=new Scanner(System.in);
+        
+        double num1,num2,resultado;
+        char operador;
+
+        System.out.println("Digite el primer numero");
+        num1=x.nextDouble();
+
+        System.out.println("Digite el segundo numero");
+        num2=x.nextDouble();
+
+        System.out.println("Digite si opcion +,-,*,/");
+        operador=x.next().charAt(0);
+        
+        switch(operador){
+
+           case '+':{
+                  resultado=num1+num2;
+                  System.out.println("LA SUMA DE LOS DOS NUMEROS ES: "+resultado);
+
+             break;
+            }
+
+            case '-':{
+                  resultado=num1-num2;
+                  System.out.println("LA RESTA DE LOS DOS NUMEROS ES: "+resultado);
+
+             break;
+            }
+
+           case '*':{
+                  resultado=num1*num2;
+                  System.out.println("lA MULTIPLICACION DE LOS DOS NUMEROS ES: "+resultado);
+
+             break;
+            }
+
+            case '/':{
+                 if(num2 !=0){
+
+                  resultado=num1/num2;
+                  System.out.println("lA DIVISION DE LOS DOS NUMEROS ES: "+resultado);
+                 }else{
+                   System.out.println("La division entre cero no existe");
+
+                 }
+             break;
+            }
+            default:
+                System.out.println("No se eligio ninguna de las opciones anteriores");
+
+        }
+
+       x.close();
+    }
+}
